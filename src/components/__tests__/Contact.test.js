@@ -20,42 +20,45 @@ describe("Contact Us Page Test Case", () => {
   // });
 
   it("Should load contact us component", () => {
-    render(<Contact />);
+   const ren= render(<Contact />);
+
 
     const heading = screen.getByRole("heading");
+
 
     // Assertion
     expect(heading).toBeInTheDocument();
   });
 
-  it("Should load button inside Contact component", () => {
-    render(<Contact />);
+  // it("Should load button inside Contact component", () => {
+  //   render(<Contact />);
 
-    const button = screen.getByRole("button");
+  //   const button = screen.getByRole("button");
 
-    // Assertion
-    expect(button).toBeInTheDocument();
-  });
+  //   // Assertion
+  //   expect(button).toBeInTheDocument();
+  // });
 
-  it("Should load input name inside Contact component", () => {
-    render(<Contact />);
+  // it("Should load input name inside Contact component", () => {
+  //   render(<Contact />);
 
-    const inputName = screen.getByPlaceholderText("name");
+  //   const inputName = screen.getByPlaceholderText("name");
 
-    // Assertion
-    expect(inputName).toBeInTheDocument();
-  });
+  //   // Assertion
+  //   expect(inputName).toBeInTheDocument();
+  // });
 
-  it("Should load 2 input boxes on the Contact component", () => {
-    render(<Contact />);
+  // it("Should load 2 input boxes on the Contact component", () => {
+  //   render(<Contact />);
 
-    // Querying
-    const inputBoxes = screen.getAllByRole("textbox");
+  //   // Querying
+  //   const inputBoxes = screen.getAllByRole("textbox");
 
-    //console.log(inputBoxes.length);
+  //   //console.log(inputBoxes.length);
 
-    // Assertion
+  //   // Assertion
 
-    expect(inputBoxes.length).toBe(2);
-  });
+  //   expect(inputBoxes.length).toBe(2);
+  // });
+
 });

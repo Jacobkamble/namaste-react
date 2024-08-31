@@ -10,6 +10,8 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestraunt] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
+  console.log(listOfRestaurants,"listof")
+
   const [searchText, setSearchText] = useState("");
 
   const RestaurantCardPromoted = withPromtedLabel(RestaurantCard);
@@ -106,7 +108,7 @@ const Body = () => {
         </div>
       </div>
       <div className="flex flex-wrap">
-        {filteredRestaurant.map((restaurant) => (
+        {filteredRestaurant?.map((restaurant) => (
           <Link
             key={restaurant?.info.id}
             to={"/restaurants/" + restaurant?.info.id}
